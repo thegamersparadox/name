@@ -12,6 +12,9 @@ isDir='true'
 while isDir == "true":
 
   if os.path.isdir(directory):
+    print ('what file would you like to save this to?')
+    file = input()
+    
     print ('what is the name?')
     name= input('')
     print ('what is the address?')
@@ -21,8 +24,8 @@ while isDir == "true":
   
     info= ((name), (address), (number))
   
-  
-    filename = 'phonebook.txt'
+    
+    filename = ((directory)+'/'+(file))
   
     with open(filename, 'w') as file_object:
       file_object.write (str(info))
